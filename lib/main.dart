@@ -27,7 +27,15 @@ class MyCVPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My CV'), backgroundColor: Colors.blue,
+        title: const Text('My CV'), 
+        backgroundColor: Colors.blue, 
+        iconTheme: const IconThemeData(
+          color: Colors.white, 
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white, 
+          fontSize: 20,
+        ),
       ),
       drawer: Drawer(
         child: ListView(
@@ -131,7 +139,14 @@ class EducationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Education'), 
-        backgroundColor: Colors.blue
+        backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(
+          color: Colors.white, 
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white, 
+          fontSize: 20,
+        ),
       ),
       body: const Padding(
         padding: EdgeInsets.all(16.0),
@@ -159,7 +174,7 @@ class EducationPage extends StatelessWidget {
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 20), // Spacing between sections
+            SizedBox(height: 20),
             Text(
               'Secondary',
               style: TextStyle(
@@ -197,7 +212,14 @@ class SkillsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Skills'),
-        backgroundColor: Colors.blue
+        backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(
+          color: Colors.white, 
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
       ),
       body: const Padding(
         padding: EdgeInsets.all(16.0),
@@ -273,7 +295,14 @@ class ProjectsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Projects'),
-        backgroundColor: Colors.blue
+        backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(
+          color: Colors.white, 
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
       ),
       body: const Center(
         child: Text(
@@ -294,7 +323,14 @@ class ExperiencePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Experience'),
-        backgroundColor: Colors.blue
+        backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
       ),
       body: const Center(
         child: Text(
