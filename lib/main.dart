@@ -54,7 +54,14 @@ class MyCVPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.school),
+              leading: Container(
+                width: 20,
+                height: 20,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 73, 67, 67),
+                  shape: BoxShape.circle, 
+                ),
+              ),
               title: const Text('Education'),
               onTap: () {
                 Navigator.push(
@@ -64,7 +71,14 @@ class MyCVPage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.build),
+              leading: Container(
+                width: 20,
+                height: 20,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 73, 67, 67),
+                  shape: BoxShape.circle, 
+                ),
+              ),
               title: const Text('Skills'),
               onTap: () {
                 Navigator.push(
@@ -74,7 +88,14 @@ class MyCVPage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.code),
+              leading: Container(
+                width: 20,
+                height: 20,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 73, 67, 67),
+                  shape: BoxShape.circle, 
+                ),
+              ),
               title: const Text('Projects'),
               onTap: () {
                 Navigator.push(
@@ -84,7 +105,14 @@ class MyCVPage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.work),
+              leading: Container(
+                width: 20,
+                height: 20,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 73, 67, 67),
+                  shape: BoxShape.circle, 
+                ),
+              ),
               title: const Text('Experience'),
               onTap: () {
                 Navigator.push(
