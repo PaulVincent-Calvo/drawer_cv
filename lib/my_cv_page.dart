@@ -114,7 +114,7 @@ class _MyCvPageState extends State<MyCvPage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 44.0, vertical: 40.0),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1B1E20), // Same as the profile container
+                  color: const Color(0xFF1B1E20), 
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -124,9 +124,12 @@ class _MyCvPageState extends State<MyCvPage> {
                       onTap: _pickImage,
                       child: Stack(
                         children: [
-                          const CircleAvatar(
+                          CircleAvatar(
                             radius: 60,
-                            backgroundImage: AssetImage('assets/images/pfp.jpg'),
+                            backgroundImage: _image != null ? FileImage(_image!) : null,
+                            child: _image == null
+                                ? const Icon(Icons.camera_alt, size: 40, color: Colors.white)
+                                : null, 
                           ),
                           Positioned(
                             top: 0,
@@ -166,7 +169,7 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), // Same background color
+                        color: const Color(0xFF1B1E20), 
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(
@@ -186,7 +189,7 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), // Same background color
+                        color: const Color(0xFF1B1E20),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(
@@ -206,7 +209,7 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), // Same background color
+                        color: const Color(0xFF1B1E20), 
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(
@@ -226,7 +229,7 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), // Same background color
+                        color: const Color(0xFF1B1E20), 
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(

@@ -5,7 +5,7 @@ class SkillsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double containerWidth = MediaQuery.of(context).size.width * 0.85; // 85% of screen width
+    double containerWidth = MediaQuery.of(context).size.width * 0.85; 
 
     return Scaffold(
       backgroundColor: const Color(0xFF465159),
@@ -29,17 +29,17 @@ class SkillsPage extends StatelessWidget {
             end: Alignment.bottomCenter, 
           ),
         ),
-        child: Center( // Wrap the entire body in Center to center all containers
-          child: SingleChildScrollView( // Add scrolling to ensure content fits on smaller screens
+        child: Center(
+          child: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.all(16),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center, // Vertically center the contents
-                crossAxisAlignment: CrossAxisAlignment.center, // Horizontally center the containers
+                mainAxisAlignment: MainAxisAlignment.center, 
+                crossAxisAlignment: CrossAxisAlignment.center, 
                 children: [
                   // Programming Languages
                   Container(
-                    width: containerWidth, // Set width here
+                    width: containerWidth,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color(0xFF1B1E20),
@@ -88,7 +88,7 @@ class SkillsPage extends StatelessWidget {
         
                   // Version Control
                   Container(
-                    width: containerWidth, // Set width here
+                    width: containerWidth, 
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color(0xFF1B1E20),
@@ -117,7 +117,7 @@ class SkillsPage extends StatelessWidget {
         
                   // Mobile App Development
                   Container(
-                    width: containerWidth, // Set width here
+                    width: containerWidth, 
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color(0xFF1B1E20),
