@@ -20,57 +20,80 @@ class EducationPage extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.all(16.0), 
-        color: const Color(0xFF465159),
-        child: const Column(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFFCDD0CE), Color(0xFF11202F)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Elementary',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+            // Elementary Education
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1B1E20),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Icon(Icons.school, size: 30, color: Colors.white),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Elementary',
+                    style: TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'School: Faith Kingswood Academy',
+                    style: const TextStyle(fontSize: 18, color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'Year Graduated: 2015',
+                    style: const TextStyle(fontSize: 18, color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
-            SizedBox(height: 5),
-            Text(
-              'School: Faith Kingswood Academy ',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
+            const SizedBox(height: 20),
+
+            // Secondary Education
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1B1E20),
+                borderRadius: BorderRadius.circular(10),
               ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'Year Graduated: 2015',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Secondary',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'School: Bauan Technical Integrated High School',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'Year Graduated: 2021',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Icon(Icons.school, size: 30, color: Colors.white),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Secondary',
+                    style: TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'School: Bauan Technical Integrated High School',
+                    style: const TextStyle(fontSize: 18, color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'Year Graduated: 2021',
+                    style: const TextStyle(fontSize: 18, color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
           ],
