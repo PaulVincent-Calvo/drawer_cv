@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'main.dart';
 import 'education_page.dart';
 import 'skills_page.dart';
 import 'projects_page.dart';
@@ -94,6 +95,40 @@ class _MyCvPageState extends State<MyCvPage> {
                 );
               },
             ),
+            const SizedBox(height: 20),
+            // Logout Button
+          Center(
+            child: SizedBox(
+              width: 200, 
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context); 
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) => LoginPage()), 
+                    (route) => false,
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  side: const BorderSide(color: Colors.black, width: 2), 
+                  padding: const EdgeInsets.symmetric(vertical: 12.0), 
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0), 
+                  ),
+                ),
+                child: const Text(
+                  "Logout",
+                  style: TextStyle(
+                    color: Colors.white, 
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+
           ],
         ),
       ),
@@ -114,7 +149,7 @@ class _MyCvPageState extends State<MyCvPage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 44.0, vertical: 40.0),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1B1E20), 
+                  color: const Color(0xFF1B1E20),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -126,10 +161,12 @@ class _MyCvPageState extends State<MyCvPage> {
                         children: [
                           CircleAvatar(
                             radius: 60,
-                            backgroundImage: _image != null ? FileImage(_image!) : null,
+                            backgroundImage: _image != null
+                                ? FileImage(_image!)
+                                : AssetImage('assets/images/pfp.jpg') as ImageProvider,
                             child: _image == null
-                                ? const Icon(Icons.camera_alt, size: 40, color: Colors.white)
-                                : null, 
+                                ? const SizedBox() // Removes the placeholder icon if default pfp.jpg is used
+                                : null,
                           ),
                           Positioned(
                             top: 0,
@@ -169,15 +206,15 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), 
+                        color: const Color(0xFF1B1E20),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                            Icon(Icons.email, size: 30, color: Colors.white),
-                            SizedBox(height: 10),
-                            Text(
+                          Icon(Icons.email, size: 30, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text(
                             'paulvincentcalvo.pr@gmail.com',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                             textAlign: TextAlign.center,
@@ -195,9 +232,9 @@ class _MyCvPageState extends State<MyCvPage> {
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                            Icon(Icons.phone, size: 30, color: Colors.white),
-                            SizedBox(height: 10),
-                            Text(
+                          Icon(Icons.phone, size: 30, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text(
                             '0966 8860 075',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                             textAlign: TextAlign.center,
@@ -209,15 +246,15 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), 
+                        color: const Color(0xFF1B1E20),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                            Icon(Icons.code, size: 30, color: Colors.white),
-                            SizedBox(height: 10),
-                            Text(
+                          Icon(Icons.code, size: 30, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text(
                             'github.com/PaulVincent-Calvo',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                             textAlign: TextAlign.center,
@@ -229,15 +266,15 @@ class _MyCvPageState extends State<MyCvPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1B1E20), 
+                        color: const Color(0xFF1B1E20),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                            Icon(Icons.business, size: 30, color: Colors.white),
-                            SizedBox(height: 10),
-                            Text(
+                          Icon(Icons.business, size: 30, color: Colors.white),
+                          SizedBox(height: 10),
+                          Text(
                             'linkedin.com/in/paul-vincent-calvo/',
                             style: TextStyle(fontSize: 18, color: Colors.white),
                             textAlign: TextAlign.center,
